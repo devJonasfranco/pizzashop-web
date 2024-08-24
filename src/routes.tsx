@@ -4,6 +4,7 @@ import { ErrorPage } from './error-page'
 import { AppLayout } from './pages/_layouts/app'
 import { AuthLayout } from './pages/_layouts/auth'
 import { Dashboard } from './pages/app/dashboard'
+import { Orders } from './pages/app/orders/orders'
 import { SignIn } from './pages/auth/sign-in'
 import { SignUp } from './pages/auth/sign-up'
 
@@ -13,7 +14,10 @@ export const rounter = createBrowserRouter([
     path: '/',
     element: <AppLayout />,
     errorElement: <ErrorPage />,
-    children: [{ path: '/', element: <Dashboard /> }],
+    children: [
+      { path: '/', element: <Dashboard /> },
+      { path: '/orders', element: <Orders /> },
+    ],
   },
   {
     // rota para login
